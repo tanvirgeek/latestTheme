@@ -1,0 +1,162 @@
+@import 'http://populr.me/assets/developers/populr_mixins.less';
+@import 'variables';
+@import 'preboot';
+
+#reset > .global-reset();
+
+/* TYPOGRAPHY DEFAULTS */
+
+@text-color: #111;
+@link-color: @accent-color;
+
+// Title text defaults
+// @headline-font-family is defined in variables.less
+@headline-font-size: 24px;
+@headline-line-height: 1.2;
+
+.headline-font() {
+  font-family: @headline-font-family;
+  font-size: @headline-font-size;
+  line-height: @headline-line-height;
+}
+
+.asset-title { .headline-font(); }
+
+// Body text defaults
+@body-font-family: Arial, sans-serif;
+@body-font-size: 14px;
+@body-line-height: 1.5;
+
+.body-font() {
+  font-family: @body-font-family;
+  font-size: @body-font-size;
+  line-height: @body-line-height;
+}
+
+// .description, .description p, .description li, .content, .content p, .content li, .body, .body p, .body li {
+.description, .content, .body, p, li {
+  .body-font();
+}
+
+/* END TYPOGRAPHY */
+
+
+/* STRUCTURE */
+
+#pop {
+  margin: 0 auto;
+  color: @text-color;
+  i, em { font-style: italic; }
+  b, strong { font-weight: 700; }
+  a {
+    color: @link-color;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+    &:active { color: lighten(@link-color, 20%); }
+  }
+}
+
+// Content wrapper
+#main-content { margin: 40px auto; }
+
+// Pop title
+#pop-title {
+  width: 960px;
+  margin: 40px auto;
+  .headline-font();
+  font-size: 54px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+// Columnizer rows & columns
+.columnizer-row {
+  width: 960px;
+  margin: 30px auto;
+}
+
+// Assets
+.asset-title { margin: 10px 0; }
+
+.description, .body {
+  margin: 10px 0;
+  ul, ol {
+    margin: .5em 0;
+    list-style-position: inside;
+  }
+  ul li { list-style-type: disc; }
+  ol li { list-style-type: decimal; }
+}
+
+.content { margin: 10px 0; }
+
+// Text assets
+.asset-type-text.asset-size-1, .asset-type-documentgroup.asset-size-1 {
+  .asset-title {
+    font-size: 36px;
+    text-align: center;
+  }
+  .description, .body, p, li {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+// Image assets
+#populr > #image-slider-themes > .basic();
+
+// Document assets
+.documents {
+  margin: 10px auto;
+  li { margin-bottom: .5em; }
+}
+
+// Clearfix
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+///////////////////////////////////////////////////////
+/* MOBILE
+The Populr mobile reset will handle some of the basics of 
+mobilizing your theme, such as stacking all of the assets 
+vertically. However, you'll have to fine tune the styling 
+to make your theme look really good on mobile devices. */
+@media all and (max-width: 960px) {
+  #populr > .mobile-reset();
+
+  #pop-title {
+    width: auto !important;
+    padding: 20px !important;
+  }
+
+  .columnizer-row {
+    width: auto !important;
+    margin: 20px auto !important;
+    padding: 0 20px !important;
+  }
+
+  .asset-title {
+    font-size: 24px !important;
+    text-align: left !important;
+  }
+
+  .description, .body, p, li {
+    font-size: 14px !important;
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #pop-title { font-size: 32px !important; }
+
+  .asset-title { font-size: 20px !important; }
+}
+
