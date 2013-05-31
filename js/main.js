@@ -11,10 +11,16 @@
 //     $(this).find('.asset-inner').innerHeight(maxHeight);
 //   });
 // }
+   $(document).on('pop-initialized', function(){
+        
+            var bs = $('#header-region .asset-type-imagegroup h2');
 
-// $(document).on('pop-initialized', function(){
-//   $('.columnizer-row .asset').live('initialize', fixColumnHeights);
-//   $('.columnizer-row .asset').live('destroy', function(){
-//     $(this).find('.asset-inner').height('auto');
-//   });
-// });
+            for( var index = 0; index < bs.length; index++ ) {
+
+                var text = bs.eq(index).text();
+                    text = '<span class="coolSpan">' + text + '</span>';
+                    //alert(text);
+                    bs.eq(index).html(text);
+
+        };
+});
