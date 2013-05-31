@@ -36,12 +36,19 @@
           {{/asset}}
 
           {{#asset "imagegroup" size="1"}}
-            <div class="content">
-              {{{imageslider images width="960" height="450"}}}
-            </div>
+            {{#if_many images}}
+                
+                {{{imageslider images width=960 height=450}}}
+                   
+            {{else}}
+                {{#each images}}
+                    <img src="{{{resize original_url width="960" height="450"}}}" alt="{{title}}"
+                {{/each}}
+            {{/if_many}}
+            
             <div id="coolText">
                 {{{title}}}
-                {{{title}}}
+                {{{description}}}
             <div>
           {{/asset}}
 
