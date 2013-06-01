@@ -88,7 +88,7 @@ html{
 #header-region{
     .columnizer-row {
       position:relative;
-      width: 960px;
+      width: 100%;
       margin:0px auto;
       padding:0px;
       .content{
@@ -104,33 +104,18 @@ html{
             }
             position:absolute;
             text-align:center; 
-            top:250px;
+            top:350px;
             z-index:200;
             overflow:auto;
             width:100%;
         }
-        
+        img{
+            width:100%!important;
+            height:100% !important;
+        }
     }
 }
 
-.frame{
-    position: relative;
-    background: url("@{base-url}/images/circularFrame.png") no-repeat left top;
-    background-size:100% 100%;
-    border: 1px solid transparent;
-    -moz-border-radius:50%;
-    border-radius:50%;
-}
-.whiteFrame{
-    position: relative;
-    background: url("@{base-url}/images/circularFrame.png") no-repeat left top;
-    background-size:100% 100%;
-    
-}
-.frame .populr-image-slider{
-    position: relative;
-    z-index: -1;
-}
 
 .coolSpan{
     background-color: black;
@@ -139,13 +124,40 @@ html{
     padding:10px;
     font-size:17px;
 }
+.cycle-next,.cycle-prev{
+                display: none;
+            }
 #four-column{
     
     .columnizer-row{
+        padding:30px;
         position:relative;
-        z-index: -10000;
         background-color:#F5F5F5;
+        .asset-type-imagegroup{
+            .cycle-next,.cycle-prev{
+                display: none;
+            }
+        }
+        .slideshow{
+            width:200px;
+            height:200px;
+            overflow: hidden !important;
+        }
+        .asset-type-imagegroup.asset-size-4{
+            
+                img{
+                    position: relative;
+                    width:180px;
+                    height:180px ;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    padding:0px;
+                    background-color: white;
+                }
+            
+        }
     }
+    
 }
 #another-four-column{
     width:100%;
@@ -156,6 +168,7 @@ html{
         padding:10px 20px 150px;;
         width: 920px; 
     }
+    
     .asset-type-text h2{
         font-size: 15px;
         color:#777770;
