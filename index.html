@@ -25,7 +25,7 @@
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
 
-    {{{title}}}
+    <div id="titleParent">{{{title}}}</div>
     
     <div id="relative-bot">
         {{#region "columnizer" id="header-region" max_cols="1" max_auto_assets="0" dummy_content="I-3"}}
@@ -35,17 +35,8 @@
             {{{body}}}
           {{/asset}}
 
-          {{#asset "imagegroup" size="1"}}
-            {{#if_many images}}
-                
-                {{{imageslider images width=960 height=450}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="960" height="450"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
-            
+          {{#asset "imagegroup" size="1"}}    
+              {{{imageslider images width=960 height=450}}}     
             <div id="coolText">
                 {{{title}}}
                 {{{description}}}
@@ -105,59 +96,44 @@
           {{/asset}}
 
           {{#asset "imagegroup" size="1"}}
-            {{#if_many images}}
-                
+          
+            <div class="frame">    
                 {{{imageslider images width=960 height=450}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="960" height="450"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
+            </div>      
+            
             {{{title}}}
             {{{description}}}
           {{/asset}}
 
           {{#asset "imagegroup" size="2"}}
-            {{#if_many images}}
-                
-                {{{imageslider images width=470 height=353}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="470" height="353"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
+                <div class="frame"> 
+                    <div class="whiteFrame">
+                        {{{imageslider images width=470 height=353}}}
+                    </div>
+                </div>      
+           
             {{{title}}}
             {{{description}}}
           {{/asset}}
 
           {{#asset "imagegroup" size="3"}}
-            <div class="content">
-              {{{imageslider images width="307" height="230"}}}
-            </div>{{#if_many images}}
-                
-                {{{imageslider images width=960 height=450}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="960" height="450"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
+            <div class="frame">
+                <div class="whiteFrame">
+                    {{{imageslider images width="307" height="230"}}}
+                </div>
+            </div>
             {{{title}}}
             {{{description}}}
           {{/asset}}
 
           {{#asset "imagegroup" size="4"}}
-            {{#if_many images}}
-                
-                {{{imageslider images width=225 height=168}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="225" height="168"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
+            
+            <div class="frame">
+                <div class="whiteFrame">
+                    {{{imageslider images width=225 height=168}}}
+                </div>
+            </div>       
+            
             {{{title}}}
             {{{description}}}
           {{/asset}}
@@ -293,63 +269,36 @@
 
           {{#asset "imagegroup" size="1"}}
             {{{title}}}
-            {{#if_many images}}
-                
+            <div class="frame">
                 {{{imageslider images width=960 height=450}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="960" height="450"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
+            </div>       
+            
             
             {{{description}}}
           {{/asset}}
 
           {{#asset "imagegroup" size="2"}}
             {{{title}}}
-            {{#if_many images}}
-                
+            <div class="frame">
                 {{{imageslider images width=470 height=353}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="470" height="353"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
-            
+            </div>       
             {{{description}}}
           {{/asset}}
 
           {{#asset "imagegroup" size="3"}}
-            <div class="content">
-              {{{title}}}
-              {{{imageslider images width="307" height="230"}}}
-            </div>{{#if_many images}}
-                
-                {{{imageslider images width=960 height=450}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="960" height="450"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
             
+            {{{title}}}
+            <div class="frame">
+              {{{imageslider images width="307" height="230"}}}
+            </div>
             {{{description}}}
           {{/asset}}
 
           {{#asset "imagegroup" size="4"}}
             {{{title}}}
-            {{#if_many images}}
-                
+            <div class="frame">
                 {{{imageslider images width=225 height=168}}}
-                   
-            {{else}}
-                
-                    <img src="{{{resize original_url width="225" height="168"}}}" alt="{{title}}"/>
-                
-            {{/if_many}}
-            
+            <div>      
             {{{description}}}
           {{/asset}}
 
