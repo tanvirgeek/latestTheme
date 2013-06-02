@@ -38,8 +38,8 @@
           {{#asset "imagegroup" size="1"}}    
               {{{imageslider images width=960 height=450}}}     
             <div id="coolText">
-                {{{title}}}
-                {{{description}}}
+                <div class="makeInlineBlock">{{{title}}}</div>
+                <div class="makeInlineBlock">{{{description}}}</div>
             <div>
           {{/asset}}
 
@@ -71,7 +71,7 @@
 
         {{/region}}
 
-        {{#region "columnizer" id="four-column" max_cols="4" max_auto_assets="0" dummy_content="I-1,I-3,I-3,I-2|T-1"}}
+        {{#region "columnizer" id="four-column" max_cols="4" max_auto_assets="0" dummy_content="I-1,I-2|T-1"}}
 
 
 
