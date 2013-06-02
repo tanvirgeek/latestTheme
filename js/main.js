@@ -37,6 +37,8 @@ $(document).on('pop-initialized', function(){
                      $(this).css("border","0px solid #27CCC0");
             });;
         });
-    
+        
+        $('#header-region .slide').css('width','100%');
+        $('#header-region .slide img').css('width','100%');
 
 });
