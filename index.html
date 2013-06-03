@@ -35,8 +35,10 @@
             {{{body}}}
           {{/asset}}
 
-          {{#asset "imagegroup" size="1"}}    
-              {{{imageslider images width=960 height=450}}}     
+          {{#asset "imagegroup" size="1"}}
+            <div class="imgContent-size-1">
+              {{{imageslider images width=960 height=450}}} 
+            <div>
             <div id="coolText">
                 <div class="makeInlineBlock">{{{title}}}</div>
                 <div class="makeInlineBlock">{{{description}}}</div>
@@ -71,174 +73,174 @@
 
         {{/region}}
 
-        {{#region "columnizer" id="four-column" max_cols="4" max_auto_assets="0" dummy_content="I-1,I-2|T-1"}}
+        {{#region "columnizer" id="four-column" max_cols="4" max_auto_assets="0" dummy_content="I-2,I-2,I-2,I-2"}}
 
 
+                {{#asset "text" size="2"}}
+                  {{{title}}}
+                  {{{body}}}
+                {{/asset}}
 
-          {{#asset "text" size="2"}}
-            {{{title}}}
-            {{{body}}}
-          {{/asset}}
+                {{#asset "text" size="1"}}
+                  {{{title}}}
+                  {{{body}}}
+                {{/asset}}
 
-          {{#asset "text" size="1"}}
-            {{{title}}}
-            {{{body}}}
-          {{/asset}}
+                {{#asset "text" size="3"}}
+                  {{{title}}}
+                  {{{body}}}
+                {{/asset}}
 
-          {{#asset "text" size="3"}}
-            {{{title}}}
-            {{{body}}}
-          {{/asset}}
+                {{#asset "text" size="4"}}
+                  {{{title}}}
+                  {{{body}}}
+                {{/asset}}
 
-          {{#asset "text" size="4"}}
-            {{{title}}}
-            {{{body}}}
-          {{/asset}}
+                {{#asset "imagegroup" size="1"}}
 
-          {{#asset "imagegroup" size="1"}}
-          
-              
-                {{{imageslider images width=960 height=450}}}
-                
+
+                      {{{imageslider images width=960 height=450}}}
+
+
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "imagegroup" size="2"}}
+
+                              {{{imageslider images width=470 height=353}}}
+
+
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "imagegroup" size="3"}}
+
+                          {{{imageslider images width="307" height="230"}}}
+
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "imagegroup" size="4"}}
+
+
+                          {{{imageslider images width=225 height=225}}}
+
+
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "documentgroup" size="1"}}
+                  {{{title}}}
+                  {{{description}}}
+                  <ul class="documents">
+                    {{#documents}}
+                      <li><a href="{{original_url}}">{{title}}</a></li>
+                    {{/documents}}
+                  </ul>
+                {{/asset}}
+
+                {{#asset "documentgroup" size="2"}}
+                  {{{title}}}
+                  {{{description}}}
+                  <ul class="documents">
+                    {{#documents}}
+                      <li><a href="{{original_url}}">{{title}}</a></li>
+                    {{/documents}}
+                  </ul>
+                {{/asset}}
+
+                {{#asset "documentgroup" size="3"}}
+                  {{{title}}}
+                  {{{description}}}
+                  <ul class="documents">
+                    {{#documents}}
+                      <li><a href="{{original_url}}">{{title}}</a></li>
+                    {{/documents}}
+                  </ul>
+                {{/asset}}
+
+                {{#asset "documentgroup" size="4"}}
+                  {{{title}}}
+                  {{{description}}}
+                  <ul class="documents">
+                    {{#documents}}
+                      <li><a href="{{original_url}}">{{title}}</a></li>
+                    {{/documents}}
+                  </ul>
+                {{/asset}}
+
+                {{#asset "embedgroup" size="1" width="960"}}
+                  {{{title}}}
+                  <div class="content">
+                    {{#embeds}}
+                      <div class="embed">{{{html}}}</div>
+                    {{/embeds}}
+                  </div>
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "embedgroup" size="2" width="470"}}
+                  {{{title}}}
+                  <div class="content">
+                    {{#embeds}}
+                      <div class="embed">{{{html}}}</div>
+                    {{/embeds}}
+                  </div>
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "embedgroup" size="3" width="307"}}
+                  {{{title}}}
+                  <div class="content">
+                    {{#embeds}}
+                      <div class="embed">{{{html}}}</div>
+                    {{/embeds}}
+                  </div>
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "embedgroup" size="4" width="225"}}
+                  {{{title}}}
+                  <div class="content">
+                    {{#embeds}}
+                      <div class="embed">{{{html}}}</div>
+                    {{/embeds}}
+                  </div>
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "videogroup" size="1"}}
+                  {{{videoplayer videos width="960" height="720" resolution="medium"}}}
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "videogroup" size="2"}}
+                  {{{videoplayer videos width="470" height="353" resolution="medium"}}}
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "videogroup" size="3"}}
+                  {{{videoplayer videos width="307" height="230" resolution="medium"}}}
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
+
+                {{#asset "videogroup" size="4"}}
+                  {{{videoplayer videos width="225" height="168" resolution="medium"}}}
+                  {{{title}}}
+                  {{{description}}}
+                {{/asset}}
             
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "imagegroup" size="2"}}
-                
-                        {{{imageslider images width=470 height=353}}}
-                         
-           
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "imagegroup" size="3"}}
             
-                    {{{imageslider images width="307" height="230"}}}
-                
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "imagegroup" size="4"}}
-            
-            
-                    {{{imageslider images width=225 height=225}}}
-                      
-            
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "documentgroup" size="1"}}
-            {{{title}}}
-            {{{description}}}
-            <ul class="documents">
-              {{#documents}}
-                <li><a href="{{original_url}}">{{title}}</a></li>
-              {{/documents}}
-            </ul>
-          {{/asset}}
-
-          {{#asset "documentgroup" size="2"}}
-            {{{title}}}
-            {{{description}}}
-            <ul class="documents">
-              {{#documents}}
-                <li><a href="{{original_url}}">{{title}}</a></li>
-              {{/documents}}
-            </ul>
-          {{/asset}}
-
-          {{#asset "documentgroup" size="3"}}
-            {{{title}}}
-            {{{description}}}
-            <ul class="documents">
-              {{#documents}}
-                <li><a href="{{original_url}}">{{title}}</a></li>
-              {{/documents}}
-            </ul>
-          {{/asset}}
-
-          {{#asset "documentgroup" size="4"}}
-            {{{title}}}
-            {{{description}}}
-            <ul class="documents">
-              {{#documents}}
-                <li><a href="{{original_url}}">{{title}}</a></li>
-              {{/documents}}
-            </ul>
-          {{/asset}}
-
-          {{#asset "embedgroup" size="1" width="960"}}
-            {{{title}}}
-            <div class="content">
-              {{#embeds}}
-                <div class="embed">{{{html}}}</div>
-              {{/embeds}}
-            </div>
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "embedgroup" size="2" width="470"}}
-            {{{title}}}
-            <div class="content">
-              {{#embeds}}
-                <div class="embed">{{{html}}}</div>
-              {{/embeds}}
-            </div>
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "embedgroup" size="3" width="307"}}
-            {{{title}}}
-            <div class="content">
-              {{#embeds}}
-                <div class="embed">{{{html}}}</div>
-              {{/embeds}}
-            </div>
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "embedgroup" size="4" width="225"}}
-            {{{title}}}
-            <div class="content">
-              {{#embeds}}
-                <div class="embed">{{{html}}}</div>
-              {{/embeds}}
-            </div>
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "videogroup" size="1"}}
-            {{{videoplayer videos width="960" height="720" resolution="medium"}}}
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "videogroup" size="2"}}
-            {{{videoplayer videos width="470" height="353" resolution="medium"}}}
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "videogroup" size="3"}}
-            {{{videoplayer videos width="307" height="230" resolution="medium"}}}
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
-          {{#asset "videogroup" size="4"}}
-            {{{videoplayer videos width="225" height="168" resolution="medium"}}}
-            {{{title}}}
-            {{{description}}}
-          {{/asset}}
-
         {{/region}}
 
-        {{#region "columnizer" id="another-four-column" max_cols="4" max_auto_assets="0" dummy_content="T-2,T-2,T-2,T-2"}}
+        {{#region "columnizer" id="another-four-column" max_cols="4" max_auto_assets="0" dummy_content="T-2,I-2|T-2|I-1"}}
 
           {{#asset "text" size="1"}}
             {{{title}}}
