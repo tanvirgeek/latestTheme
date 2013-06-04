@@ -1,6 +1,20 @@
+@font-face {
+        font-family: 'openSans';
+        src: url('@{base-url}/fonts/opensans-semibold-webfont.eot');
+        src: url('@{base-url}/fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('@{base-url}/fonts/opensans-semibold-webfont.woff') format('woff'),
+             url('@{base-url}/fonts/opensans-semibold-webfont.eot') format('truetype'),
+             url('@{base-url}/fonts/opensans-semibold-webfont.svg#CreativeBlockBBBold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+
+}
+
 @import 'http://populr.me/assets/developers/populr_mixins.less';
 @import 'variables';
 @import 'preboot';
+
+
 
 #reset > .global-reset();
 
@@ -23,7 +37,7 @@
 .asset-title { .headline-font(); }
 
 // Body text defaults
-@body-font-family: Arial, sans-serif;
+@body-font-family: 'openSans',Arial, sans-serif;
 @body-font-size: 14px;
 @body-line-height: 1.5;
 
@@ -46,7 +60,28 @@ html{
     margin:0;
     padding:0;
 }
-
+.goUp{
+    position:fixed;
+    display:block;
+    bottom: -50px;
+    right:25px!important;
+    height:25px;
+    width:25px;
+    background: url("@{base-url}/images/up.png") no-repeat top left;
+    background-size:100% 100%;
+    z-index:500;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 3px 3px -3px black;
+    -moz-box-shadow: 0 3px 3px -3px black;
+    box-shadow: 0 3px 3px -3px black;
+    
+}
+.goUp:hover{
+    background: url("@{base-url}/images/up-hover.png") no-repeat top left;
+}
 #pop {
   margin: 0 auto;
   color: @text-color;
@@ -71,8 +106,7 @@ html{
     padding: 20px 0px;
     .headline-font();
     font-size: 45px;
-    line-height: 1.1;
-    height: 59px;
+    line-height: 1.5;
     text-align: center;
     z-index:1000;
     #pop-title {
@@ -80,7 +114,6 @@ html{
         width:960px;
     }
 }
-
 
 
 // Columnizer rows & columns
@@ -127,6 +160,7 @@ html{
     }
 
     .asset-type-imagegroup{
+        position:relative;
         #coolText{
             h2{
                 margin-bottom:20px;
@@ -153,6 +187,9 @@ html{
     -webkit-box-shadow: 0 3px 3px -3px @shadow;
     -moz-box-shadow: 0 3px 3px -3px @shadow;
     box-shadow: 0 3px 3px -3px @shadow;
+    text-shadow: 1px 1px 1px #000;
+    -moz-text-shadow: 1px 1px 1px #000;
+    -webkit-text-shadow: 1px 1px 1px #000;
 
 }
 .asset-title,.description, .body{
@@ -281,9 +318,11 @@ html{
     }
     
     .asset-type-text h2{
-        font-size: 15px;
+        font-size: 17px;
         color:#777770;
         padding:6px 6px 6px 10px;
+        text-transform:uppercase;
+        letter-spacing:1px;
     }
     .asset-type-text .body{
         font-size:15px;
@@ -303,7 +342,6 @@ html{
 #relative-bot{
     overflow:hidden;
     position:relative;
-    top: 79px;
     z-index:10;
     clear:both;
     margion:0;
@@ -390,11 +428,74 @@ to make your theme look really good on mobile devices. */
     font-size: 14px !important;
     text-align: left !important;
   }
+
+    #coolText{
+    position:relative!important;
+    top:0!important;
+    left:0!important;
+    text-align:left!important;
+    .makeInlineBlock{
+        margin-bottom:3px!important;
+        padding:0px 6px !important;
+    }
+    h2{
+        display:block!important;
+        margin-bottom:2px!important;
+        padding: 9px 11px !important;
+    }
+    .asset-title{
+        font-size:15px !important;
+        line-height:1.3 !important;
+    }
+    .description{
+        display:block!important;
+        padding:2px!important;
+    }
+    .description p{
+        font-size:13px !important;
+        line-height:1.4 !important;
+        padding: 9px 11px !important;
+        display:block!important;
+    }
+    
+  }
 }
 
 @media screen and (max-width: 600px) {
-  #pop-title { font-size: 32px !important; }
-
+  #pop-title { font-size: 25px}
+  .columnizer-row{
+        padding:10px !important;
+  }
+  #coolText{
+    position:relative!important;
+    top:0!important;
+    left:0!important;
+    text-align:left!important;
+    .makeInlineBlock{
+        margin-bottom:2px!important;
+        padding:0px 5px !important;
+    }
+    h2{
+        display:block!important;
+        margin-bottom:1px!important;
+        padding: 8px 10px !important;
+    }
+    .asset-title{
+        font-size:15px !important;
+        line-height:1.3 !important;
+    }
+    .description{
+        display:block!important;
+        padding:1px!important;
+    }
+    .description p{
+        font-size:12px !important;
+        line-height:1.4 !important;
+        padding: 8px 10px !important;
+        display:block!important;
+    }
+    
+  }
   .asset-title { font-size: 20px !important; }
 }
 
