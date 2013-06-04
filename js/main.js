@@ -46,7 +46,6 @@ $(document).on('pop-initialized', function(){
             width:'100%',
             height: '100%'
         });
-        
     init();
 
 

@@ -20,7 +20,7 @@
 
 /* TYPOGRAPHY DEFAULTS */
 
-@text-color: #111;
+@text-color: #444;
 @link-color: @accent-color;
 
 // Title text defaults
@@ -102,7 +102,7 @@ html{
 #titleParent{
     position:fixed;
     width:100%;
-    background-color: @title-bg-color;
+    background-color: @title-bg-color!important;
     padding: 20px 0px;
     .headline-font();
     font-size: 45px;
@@ -196,7 +196,11 @@ html{
     .allTextBox();
 }
 #pop-title{
-    
+    color: black;
+    font-weight: normal;
+    text-shadow: 2px 2px 3px #f5f5f5;
+    -moz-text-shadow: 2px 2px 3px #f5f5f5;
+    -webkit-text-shadow: 2px 1px 3px #f5f5f5;
 }
 #titleParent{
     .allTextBox(3px,#f6f6f6,black);
@@ -214,7 +218,9 @@ html{
 #another-four-column {
         .asset-title,.description, .body{
             .allTextBox(3px,#26292B,black);
+        
     }
+        
 }
 
 .cycle-next,.cycle-prev{
@@ -297,6 +303,20 @@ html{
             .circularImage(900px,850px,12px);
         }
     }
+    .description, .body {
+        font-size: 15px;
+        color:#777777;
+        text-shadow: none;
+        -moz-text-shadow: none;
+        -webkit-text-shadow: none;
+    }
+    .asset-title{
+        font-size: 18px;
+        color:#444444;
+        text-shadow: 1px 1px 0px #f5f5f5;
+        -moz-text-shadow: 1px 1px 0px #f5f5f5;
+        -webkit-text-shadow: 1px 1px 0px #f5f5f5;
+    }
 }
 
 #four-column>div:first-of-type{
@@ -308,6 +328,7 @@ html{
 }
 
 #another-four-column{
+    
     width:100%;
     background-color:@footer-bg-color;
     .columnizer-row{
@@ -317,23 +338,29 @@ html{
         width: 920px; 
     }
     
-    .asset-type-text h2{
-        font-size: 17px;
+    .asset-type-text h2,.asset-title{
+        font-size: 17px!important;
         color:#777770;
         padding:6px 6px 6px 10px;
         text-transform:uppercase;
         letter-spacing:1px;
     }
-    .asset-type-text .body{
-        font-size:15px;
+    .description, .body,.body p {
+        font-size:15px!important;
         color:#CCCCCC;
         background-color:#26292B;
         padding:10px;
         margin-bottom:5px;
     }
     .populr-image-slider{
-        .imgFrame(#5AD8CF,10px)
+        .imgFrame(#5AD8CF,10px);
+        
     }
+    .description{
+        color: #cccccc;
+    }
+    
+    
 }
 #another-four-column>div:last-of-type{
     padding-bottom:150px;
