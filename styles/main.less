@@ -294,12 +294,13 @@ html{
 }
 .asset-type-documentgroup{
     h2{
-        text-align:left;
-        padding-left:0px;
-        margin-bottom:15px;
+        text-align:left!important;
+        padding-left:0px!important;
+        margin-bottom:20px!important;
     }
-    .description{
-        text-align: left;
+    .description p{
+        text-align: left!important;
+        padding-top:10px;
     }
 }
 .documents li a{
@@ -310,7 +311,7 @@ html{
     overflow: hidden;
 }
 .documents li a div:first-of-type{
-    width:45%;
+    width:30%;
     float: left;
     padding:5px 3px 3px 30px;
     background: url("@{base-url}/images/document.png") top left no-repeat;
@@ -324,17 +325,18 @@ html{
 }
 .documents li a div:last-of-type{
     width:20%;
-    float: left;
+    float: right;
     text-align: center;
     padding:3px 15px 3px 3px;
     background:#c2c2c2;
-    font-size: 11px;
+   
     .allTextBox;
+    font-size: 11px!important;
     
 }
 .download{
     font-family: 'openSans', Arial, sans-serif!important;
-   font-size: 11px;
+   font-size: 11px!important;
    color: #444444;
    padding-top:0px;
    font-weight:normal;
