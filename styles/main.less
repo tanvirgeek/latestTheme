@@ -312,27 +312,42 @@ html{
 .documents li a div:first-of-type{
     width:45%;
     float: left;
-    padding:0px 3px 3px 30px;
+    padding:5px 3px 3px 30px;
     background: url("@{base-url}/images/document.png") top left no-repeat;
     color:#777777;
     text-shadow: none !important;
     -moz-text-shadow: none !important;
     -webkit-text-shadow: none !important;
-    font-size:12px;
+    font-size:13px;
     font-weight: normal;
     text-decoration: none;
 }
 .documents li a div:last-of-type{
     width:20%;
-    float: right;
+    float: left;
     text-align: center;
     padding:3px 15px 3px 3px;
-    background: url("@{base-url}/images/sprite.png") top left no-repeat;
-    background-size: 100% 100%;
+    background:#c2c2c2;
+    font-size: 11px;
+    .allTextBox;
     
 }
 .download{
-    visibility: hidden !important;
+    font-family: 'openSans', Arial, sans-serif!important;
+   font-size: 11px;
+   color: #444444;
+   padding-top:0px;
+   font-weight:normal;
+    text-shadow: none;
+   -moz-text-shadow: none;
+   webkit-text-shadow: none;
+}
+
+.documents li a div:last-of-type:hover .download{
+   color: #5AD8CF;
+   text-shadow: none;
+   -moz-text-shadow: none;
+   webkit-text-shadow: none;
 }
 
 
