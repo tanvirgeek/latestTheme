@@ -15,9 +15,8 @@ function init(){
     
     var initialHeight=$('#pop-title').height();
     if(initialHeight!==undefined){
-        alert('here');
-        $('#pop-title').css('height','30px');
-        $('#pop-title').append('<h3>Title</h3>');
+    
+        
     
   
     var fontSize=$('#pop-title').css('font-size');
