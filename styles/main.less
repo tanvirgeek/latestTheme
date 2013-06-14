@@ -64,8 +64,7 @@
 }
 
 /* END TYPOGRAPHY */
-// Image assets
-#populr > #image-slider-themes > .basic();
+
 
 /* STRUCTURE */
 html{
@@ -152,7 +151,7 @@ html{
  
                     
        }
-       .fancybox,.fancybox-enabled{
+      .fancybox,.fancybox-enabled{
             width:100% !important;
             
         }
@@ -239,27 +238,25 @@ html{
                 display: none;
             }
 
-.circularImage(@box1:200px,@box2:180px,@padding:10px){
+.boxImage(@width:200px,@height:180px,@padding:10px){
     .slideshow{
                 position:relative;
-                width:@box1!important;
-                height:@box1!important;
+                width:@width!important;
+                height:@height!important;
                 margin:auto;
                 overflow: hidden !important;
               }
     .slide{
-                    width:@box1!important;
-                    height:@box1!important;
-                    margin: 0 auto;
-                    position:relative !important;
-                }
+                width:@width!important;
+                height:@height!important;
+                margin: 0 auto;
+                position:relative !important;
+          }
 
     img{
         position: absolute;
-        width:@box2;
-        height:@box2;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
+        width:@width - (2*@padding + 2px);
+        height:@height - (2*@padding + 2px);
         padding:@padding!important;
         background-color: white;
         border: 1px solid #27CCC0;
@@ -270,29 +267,10 @@ html{
         bottom: 0;
         text-align: center;
         background-color: white;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -khtml-border-radius: 50%;
-        border-radius: 50%;
-        -webkit-box-shadow: 0 3px 3px -3px black;
-        -moz-box-shadow: 0 3px 3px -3px black;
-        box-shadow: 0 3px 3px -3px black;
     }
 }
 
-.imgFrame(@border,@pad){
 
-    background-color:white;
-    border: 1px solid @border;
-    padding: @pad;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 3px 3px -3px black;
-    -moz-box-shadow: 0 3px 3px -3px black;
-    box-shadow: 0 3px 3px -3px black;
-}
 .documents li{
     display:block;
     text-align: left;
@@ -360,17 +338,36 @@ html{
 
 #four-column{
     margin: 2px 0px;
-    
-    .populr-image-slider{
-            .imgFrame(#5AD8CF,8px);
-        
-        }
     .columnizer-row{
         .allTextBox(3px,#F5F5F5,#f1f1f1);
         padding:10px 30px;
         margin:0px auto;
         position:relative;
+        .asset-type-imagegroup.asset-size-4{
+            .populr-image-slider{
+                .boxImage(225px,168px,8px);
         
+            }
+        }
+        
+        .asset-type-imagegroup.asset-size-3{
+            .populr-image-slider{
+                .boxImage(307px,230px,8px);
+        
+            }
+        }
+        .asset-type-imagegroup.asset-size-2{
+            .populr-image-slider{
+                .boxImage(470px,353px,8px);
+        
+            }
+        }
+        .asset-type-imagegroup.asset-size-1{
+            .populr-image-slider{
+                .boxImage(960px,720px,8px);
+        
+            }
+        }
     }
     .description, .body,.body p{
         font-size: 12px !important;
@@ -409,14 +406,38 @@ html{
 
 #another-four-column{
     width:100%;
-    
     background-color:@footer-bg-color;
     position:relative;
     .columnizer-row{
         margin: auto;
         margin-bottom:0px;
         padding:10px 20px;
-        width: 920px; 
+        width: 960px; 
+        .asset-type-imagegroup.asset-size-4{
+            .populr-image-slider{
+                .boxImage(225px,168px,8px);
+        
+            }
+        }
+        
+        .asset-type-imagegroup.asset-size-3{
+            .populr-image-slider{
+                .boxImage(307px,230px,8px);
+        
+            }
+        }
+        .asset-type-imagegroup.asset-size-2{
+            .populr-image-slider{
+                .boxImage(470px,353px,8px);
+        
+            }
+        }
+        .asset-type-imagegroup.asset-size-1{
+            .populr-image-slider{
+                .boxImage(960px,720px,8px);
+        
+            }
+        }
     }
 
     .asset-type-text{
@@ -448,10 +469,7 @@ html{
         font-family: 'openSansRegular', Arial, sans-serif;
     }
     
-    .populr-image-slider{
-        .imgFrame(#5AD8CF,8px);
-        
-    }
+    
     .description{
         color: #cccccc;
     }
@@ -535,7 +553,8 @@ html{
   }
 }
 
-
+// Image assets
+#populr > #image-slider-themes > .basic();
 
 // Document assets
 .documents {
