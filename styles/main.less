@@ -20,7 +20,7 @@
         font-weight: normal;
         font-style: normal;
 }
-
+@populr-theme-version:1;
 @import 'http://populr.me/assets/developers/populr_mixins.less';
 @import 'variables';
 @import 'preboot';
@@ -151,6 +151,10 @@ html{
  
                     
        }
+       .fancybox,.fancybox-enabled{
+            width:100% !important;
+            
+        }
       .slideshow{
             width:100% !important;
                             
@@ -355,6 +359,15 @@ html{
 
 #four-column{
     margin: 2px 0px;
+   .fancybox,.fancybox-enabled{
+         width:100% !important;
+         a{    
+                display:block !important;
+                width:100% !important;
+                height:100% !important;
+            
+            }
+     }
     .columnizer-row{
         .allTextBox(3px,#F5F5F5,#f1f1f1);
         padding:10px 30px;
@@ -362,26 +375,27 @@ html{
         position:relative;
         .asset-type-imagegroup.asset-size-4{
             .populr-image-slider{
-                .imgFrame(#5AD8CF,7px);
+                .imgFrame(#5AD8CF,8px);
         
             }
+         
         }
         
         .asset-type-imagegroup.asset-size-3{
             .populr-image-slider{
-                .imgFrame(#5AD8CF,9px);
+                .imgFrame(#5AD8CF,8px);
         
             }
         }
         .asset-type-imagegroup.asset-size-2{
             .populr-image-slider{
-                .imgFrame(#5AD8CF,11px);
+                .imgFrame(#5AD8CF,8px);
         
             }
         }
         .asset-type-imagegroup.asset-size-1{
             .populr-image-slider{
-                .imgFrame(#5AD8CF,13px);
+                .imgFrame(#5AD8CF,8px);
         
             }
         }
@@ -423,6 +437,15 @@ html{
 
 #another-four-column{
     width:100%;
+    .fancybox,.fancybox-enabled{
+         width:100% !important;
+         a{    
+                display:block !important;
+                width:100% !important;
+                height:100% !important;
+            
+            }
+     }
     background-color:@footer-bg-color;
     position:relative;
     .columnizer-row{
@@ -462,7 +485,7 @@ html{
     }
     
     .populr-image-slider{
-        .imgFrame(#5AD8CF,10px);
+        .imgFrame(#5AD8CF,8px);
         
     }
     .description{
