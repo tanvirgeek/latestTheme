@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html itemscope>
 <head>
   <meta charset="utf-8">
+  <!-- Dummy content parameters -->
+  <!-- dummyImageCategory: specify search term for images to pull from 500px -->
+  <meta itemprop="dummyImageCategory" content="cat">
+  <!-- dummyContentLength: specify how much dummy text appears within each asset -->
+  <!-- Value can be set to small, medium or large -->
+  <meta itemprop="dummyContentLength" content="medium">
 
   <!-- Name of your theme -->
   <title>Columnizer Base</title>
@@ -30,13 +36,18 @@
     <div id="titleParent">{{{title}}}</div>
     
     <div id="relative-bot">
-        {{#region "columnizer" id="header-region" max_cols="1" max_auto_assets="0" dummy_content="I-2"}}
+        {{#region "columnizer" id="header-region" max_cols="1" max_auto_assets="0" dummy_content="I-2|T-1|E-2|D-1|V-1"}}
 
-          {{#asset "text" size="1"}}
-            {{{title}}}
-            {{{body}}}
-          {{/asset}}
-
+           
+            {{#asset "text" size="1"}}
+                <div class="NineSixty">
+            
+                    {{{title}}}
+                    {{{body}}}
+                </div>
+                
+            {{/asset}}
+           
           {{#asset "imagegroup" size="1"}}
             <div class="imgContent-size-1">
               {{{imageslider images width="960" height="450"}}} 
@@ -46,26 +57,33 @@
                 <div class="makeInlineBlock">{{{description}}}</div>
             </div>
           {{/asset}}
-
+          
           {{#asset "documentgroup" size="1"}}
-            {{{title}}}
-            
-            {{#documents}}
+          <div class="NineSixty">
+          
+                {{{title}}}
+                  
+                  <ul class="documents">
+                    {{#documents}}
                         <li>
                             <a href="{{original_url}}">
                                 <div>
                                     {{title}}
                                 </div>
-                                <div >
+                                <div>
                                     <p class="download">Download</p>
                                 </div>
                             </a>
                         </li>
-            {{/documents}}
-            {{{description}}}
+                    {{/documents}}
+                   </ul>
+                {{{description}}}
           {{/asset}}
-
+          </div>
+          
             {{#asset "embedgroup" size="1" width="960"}}
+            <div class="NineSixty">
+          
             {{{title}}}
             <div class="content">
               {{#embeds}}
@@ -73,17 +91,25 @@
               {{/embeds}}
             </div>
             {{{description}}}
+            </div>
+              
           {{/asset}}
-
+          
+          
+          
           {{#asset "videogroup" size="1"}}
+          <div class="NineSixty">
+          
             {{{videoplayer videos width="400" height="300" resolution="medium"}}}
             {{{title}}}
             {{{description}}}
+            
+          </div>
           {{/asset}}
-
+          
         {{/region}}
 
-        {{#region "columnizer" id="four-column" max_cols="4" max_auto_assets="0" dummy_content="I-2,I-2,I-2,I-2|T-2,T-2|T-2,E-2,E-2|D-2,D-1|D-1"}}
+        {{#region "columnizer" id="four-column" max_cols="4" max_auto_assets="0" dummy_content="I-2,I-2,I-2,I-2|I-2,I-2,I-2|I-2,I-2|I-2|T-2,T-2,T-2,T-2|T-2,T-2,T-2|T-2,T-2|T-2|E-2,E-2,E-2,E-2|E-2,E-2|E-2|D-1,T-2,T-2,D-1|D-2,D-2,D-2|D-2"}}
 
 
                 {{#asset "text" size="2"}}
@@ -290,7 +316,7 @@
             
         {{/region}}
 
-        {{#region "columnizer" id="another-four-column" max_cols="4" max_auto_assets="0" dummy_content="T-2,T-2|T-2|I-2,I-2"}}
+        {{#region "columnizer" id="another-four-column" max_cols="4" max_auto_assets="0" dummy_content="I-2,I-2,I-2,I-2|I-2,I-2,I-2|I-2,I-2|I-2|T-2,T-2,T-2,T-2|T-2,T-2,T-2|T-2,T-2|T-2|E-2,E-2,E-2,E-2|E-2,E-2|E-2|D-2,D-2|D-2"}}
 
           {{#asset "text" size="1"}}
             {{{title}}}
