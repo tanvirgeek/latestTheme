@@ -20,7 +20,7 @@
         font-weight: normal;
         font-style: normal;
 }
-@populr-theme-version:1;
+@populr-theme-version:0;
 @import 'http://populr.me/assets/developers/populr_mixins.less';
 @import 'variables';
 @import 'preboot';
@@ -48,13 +48,13 @@
 .asset-title { .headline-font(); }
 
 // Body text defaults
-@body-font-family: 'openSans',Arial, sans-serif;
-@body-font-size: 14px;
+@body-font-family: 'openSansRegular',Arial, sans-serif;
+@body-font-size: 13px;
 @body-line-height: 1.5;
 
 .body-font() {
   font-family: @body-font-family;
-  font-size: @body-font-size;
+  font-size: @body-font-size!important;
   line-height: @body-line-height;
 }
 
@@ -128,9 +128,36 @@ html{
 
 
 // Columnizer rows & columns
-
+.textStyling(){
+    .description, .body,.body p{
+        font-size: 12px !important;
+        color:#777777 !important;
+        text-shadow: none;
+        -moz-text-shadow: none;
+        -webkit-text-shadow: none;
+        font-family: 'openSansRegular', Arial, sans-serif!important;
+    }
+    .description p{
+        font-size: 12px !important;
+        color:#777777 !important;
+        text-shadow: none;
+        -moz-text-shadow: none;
+        -webkit-text-shadow: none;
+        font-family: 'openSansRegular', Arial, sans-serif!important;
+    }
+    .asset-type-text h2,.asset-title{
+        font-size: 21px !important;
+        letter-spacing: -1px !important;
+        font-weight: normal;
+        color:#444444 !important;
+        text-shadow: none;
+        -moz-text-shadow: none;
+        -webkit-text-shadow: none;
+    }
+}
 #header-region{
     font-family:@text-font-family;
+    background-color:#F5F5F5;
     .columnizer-row {
       position:relative;
       width: 100%;
@@ -144,7 +171,8 @@ html{
                 width:100% !important;
                 -webkit-box-shadow: 0 3px 3px -3px black;
                 -moz-box-shadow: 0 3px 3px -3px black;
-                box-shadow: 0 3px 3px -3px black;
+                box-shadow: 0 3px 3px -3px black;      
+                margin-bottom:1px;
        }
       .slider{
         width:100% !important;
@@ -170,6 +198,13 @@ html{
       .content{
             margin:0px;
             padding:0px;
+        }
+        .NineSixty{
+            width:960px;
+            margin:0 auto;
+            padding:15px 30px;
+            .textStyling();
+            
         }
       
     }
@@ -274,6 +309,7 @@ html{
 .documents li{
     display:block;
     text-align: left;
+    font-size: 12px;
 }
 .asset-type-documentgroup{
     h2{
@@ -307,7 +343,7 @@ html{
     text-decoration: none;
 }
 .documents li a div:last-of-type{
-    width:20%;
+    width:22%;
     float: right;
     text-align: center;
     padding:3px 15px 3px 3px;
@@ -343,57 +379,8 @@ html{
         padding:10px 30px;
         margin:0px auto;
         position:relative;
-        .asset-type-imagegroup.asset-size-4{
-            .populr-image-slider{
-                .boxImage(225px,168px,8px);
-        
-            }
-        }
-        
-        .asset-type-imagegroup.asset-size-3{
-            .populr-image-slider{
-                .boxImage(307px,230px,8px);
-        
-            }
-        }
-        .asset-type-imagegroup.asset-size-2{
-            .populr-image-slider{
-                .boxImage(470px,353px,8px);
-        
-            }
-        }
-        .asset-type-imagegroup.asset-size-1{
-            .populr-image-slider{
-                .boxImage(960px,720px,8px);
-        
-            }
-        }
     }
-    .description, .body,.body p{
-        font-size: 12px !important;
-        color:#777777 !important;
-        text-shadow: none;
-        -moz-text-shadow: none;
-        -webkit-text-shadow: none;
-        font-family: 'openSansRegular', Arial, sans-serif!important;
-    }
-    .description p{
-        font-size: 12px !important;
-        color:#777777 !important;
-        text-shadow: none;
-        -moz-text-shadow: none;
-        -webkit-text-shadow: none;
-        font-family: 'openSansRegular', Arial, sans-serif!important;
-    }
-    .asset-type-text h2,.asset-title{
-        font-size: 21px !important;
-        letter-spacing: -1px !important;
-        font-weight: normal;
-        color:#444444 !important;
-        text-shadow: none;
-        -moz-text-shadow: none;
-        -webkit-text-shadow: none;
-    }
+    .textStyling();
 }
 
 #four-column>div:first-of-type{
@@ -413,31 +400,7 @@ html{
         margin-bottom:0px;
         padding:10px 20px;
         width: 960px; 
-        .asset-type-imagegroup.asset-size-4{
-            .populr-image-slider{
-                .boxImage(225px,168px,8px);
         
-            }
-        }
-        
-        .asset-type-imagegroup.asset-size-3{
-            .populr-image-slider{
-                .boxImage(307px,230px,8px);
-        
-            }
-        }
-        .asset-type-imagegroup.asset-size-2{
-            .populr-image-slider{
-                .boxImage(470px,353px,8px);
-        
-            }
-        }
-        .asset-type-imagegroup.asset-size-1{
-            .populr-image-slider{
-                .boxImage(960px,720px,8px);
-        
-            }
-        }
     }
 
     .asset-type-text{
@@ -573,7 +536,40 @@ html{
 }
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+@media all and (min-width: 961px){
 
+    #four-column,#another-four-column{
+    
+       .columnizer-row{
+        .asset-type-imagegroup.asset-size-4{
+            .populr-image-slider{
+                .boxImage(225px,168px,3px);
+        
+            }
+        }
+        
+        .asset-type-imagegroup.asset-size-3{
+            .populr-image-slider{
+                .boxImage(307px,230px,4px);
+        
+            }
+        }
+        .asset-type-imagegroup.asset-size-2{
+            .populr-image-slider{
+                .boxImage(470px,353px,5px);
+        
+            }
+        }
+        .asset-type-imagegroup.asset-size-1{
+            .populr-image-slider{
+                .boxImage(960px,720px,6px);
+        
+            }
+        }
+    }
+
+}
+}
 ///////////////////////////////////////////////////////
 /* MOBILE
 The Populr mobile reset will handle some of the basics of 
@@ -588,12 +584,17 @@ to make your theme look really good on mobile devices. */
     padding: 20px !important;
   }
 
-  .columnizer-row {
+  .columnizer-row,.NineSixty {
     width: auto !important;
     margin: 20px auto !important;
     padding: 0 20px !important;
   }
-
+  #four-column .asset-type-imagegroup, #another-four-column .asset-type-imagegroup{
+            .populr-image-slider{
+                .boxImage(750px,450px,3px);
+        
+            }
+   }
   .asset-title {
     font-size: 24px !important;
     text-align: left !important;
@@ -638,10 +639,23 @@ to make your theme look really good on mobile devices. */
 
 @media screen and (max-width: 600px) {
   #pop-title { font-size: 25px}
-  .columnizer-row{
+    .columnizer-row {
         padding:10px !important;
-  }
-  #coolText{
+    }
+    .NineSixty{
+        width : auto!important;
+        padding:10px !important;
+    }
+
+    #four-column .asset-type-imagegroup, #another-four-column .asset-type-imagegroup{
+            
+            .populr-image-slider{
+                .boxImage(450px,280px,2px);
+        
+            }
+    }
+  
+   #coolText{
     position:relative!important;
     top:0!important;
     left:0!important;
